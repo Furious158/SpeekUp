@@ -108,8 +108,8 @@ const Home = () => {
       <Box>
         <Flex wrap="wrap" gap={20} justify="center" mb={20}>
           <CustomCard
-            title="Freestyle explosif 🔥"
-            description="Regarde ce freestyle puissant d'un jeune talent du rap."
+            title="Présentation du projet et de l'équipe 🔥"
+            description="Découvrez SpeekUp et son équipe !"
             buttonText="Regarder" //lien pour regarder sur ytb
             videoId="xCOQgo3Ejcw" // Remplace par un vrai ID YouTube
           />
