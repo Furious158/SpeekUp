@@ -34,6 +34,8 @@ const About = () => {
       </Heading>
       <Text fontSize="lg">
         Notre podcast met en lumière les talents émergents du rap. Découvrez leur univers et leur musique.
+        <br />
+        👋 Bienvenue dans Speak Up, le podcast qui donne la parole aux créateurs et acteurs de la culture rennaise. Ici, on célèbre toutes les formes d’art : musique, danse, théâtre, écriture, arts visuels… et bien plus encore. Que vous soyez artiste émergent, passionné confirmé ou simple curieux, Speak Up est votre rendez-vous avec l’expression culturelle."
       </Text>
     </Box>
 

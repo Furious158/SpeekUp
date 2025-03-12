@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CustomCard from "../components/ui/Card";
+import { Separator } from "@chakra-ui/react";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
 import {
   Box,
   Heading,
@@ -65,7 +70,7 @@ const Home = () => {
               size="lg"
               _hover={{ bg: "yellow.300" }}
               as="a"
-              href="#contact"
+              href="/contact"
             >
               Rejoins le mouvement
             </Button>
@@ -92,12 +97,101 @@ const Home = () => {
           </Box>
         </Flex>
       </Box>
+      <Box py={8}>
+  <Separator
+    borderColor="yellow.300"
+    borderWidth="2px"
+    mb={6}
+    position="relative"
+  >
+    <Text
+      position="absolute"
+      top="-10px"
+      left="50%"
+      transform="translateX(-50%)"
+      bg="black"
+      px={4}
+      color="yellow.400"
+      fontSize="xl"
+      fontWeight="bold"
+    >
+      Nouveautés
+    </Text>
+  </Separator>
+</Box>
+      <Box>
+      <Flex wrap="wrap" gap={20} justify="center" mb={20}>
+  <CustomCard
+    title="Freestyle explosif 🔥"
+    description="Regarde ce freestyle puissant d'un jeune talent du rap."
+    buttonText="Regarder" //lien pour regarder sur ytb
+    videoId="xCOQgo3Ejcw" // Remplace par un vrai ID YouTube
+  />
+
+  <CustomCard
+    title="Interview exclusive 🎤"
+    description="Un artiste parle de son parcours et de son inspiration."
+    buttonText="Regarder" //lien pour regarder sur ytb
+    videoId="xCOQgo3Ejcw"
+  />
+  </Flex>
+      </Box>
 
       {/* Footer Section */}
-      <Box as="footer" bg="yellow.400" color="black" py={4} px={6} textAlign="center" mt="auto">
-        <Text fontSize="sm">© 2024 SpeekUp. Tous droits réservés.</Text>
-      </Box>
-    </Box>
+      {/* Footer Section */}
+<Box as="footer" bg="yellow.400" color="black" py={8} px={6} textAlign="center" mt="auto">
+  <Flex direction="column" align="center" gap={4}>
+    {/* Social Media Icons */}
+    <HStack spacing={6} justify="center">
+      <Button
+        as="a"
+        href="https://www.instagram.com"
+        target="_blank"
+        variant="ghost"
+        color="black"
+        _hover={{ color: "yellow.300" }}
+      >
+        <FaInstagram size={30} />
+      </Button>
+      <Button
+        as="a"
+        href="https://www.youtube.com"
+        target="_blank"
+        variant="ghost"
+        color="black"
+        _hover={{ color: "yellow.300" }}
+      >
+        <FaYoutube size={30} />
+      </Button>
+      <Button
+        as="a"
+        href="https://www.spotify.com"
+        target="_blank"
+        variant="ghost"
+        color="black"
+        _hover={{ color: "yellow.300" }}
+      >
+        <FaSpotify size={30} />
+      </Button>
+    </HStack>
+
+    {/* Footer Links */}
+    <HStack spacing={6} justify="center" mt={4}>
+      <Button as="a" href="/mentions-legales" variant="link" color="black" _hover={{ color: "yellow.300" }}>
+        Mentions légales
+      </Button>
+      <Button as="a" href="/conditions-generales" variant="link" color="black" _hover={{ color: "yellow.300" }}>
+        Conditions générales
+      </Button>
+    </HStack>
+
+    {/* Copyright */}
+    <Text fontSize="sm" mt={4}>
+      © 2024 SpeekUp. Tous droits réservés.
+    </Text>
+  </Flex>
+</Box>
+</Box>
   );
 };
 
